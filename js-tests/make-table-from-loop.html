@@ -1,0 +1,45 @@
+<!DOCTYPE html public>
+<html>
+
+<head>
+<script type="text/javascript">
+
+function inittable() {
+
+	var maxX=5, maxY=5;
+
+	var i=0,j=0;
+
+	var theTable = document.getElementById('board');
+
+	if ( theTable==null) alert("board not found");
+
+	while  (  j < maxY ) {
+
+		theTable.tBodies[0].appendChild(document.createElement('tr'));
+
+		while  (  i < maxY ) {
+			
+			var y = document.createElement('td');
+			y.appendChild(document.createTextNode('Tbody '+i+ " " + j));
+			theTable.tBodies[0].rows[j].appendChild(y);
+
+			i++; //		
+		}
+		j++;
+		i=0;
+	}
+
+}
+
+</script> 
+
+</head>
+
+ <body onLoad="inittable()"> 
+	<table id="board" border="2">
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>

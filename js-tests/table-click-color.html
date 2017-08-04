@@ -1,0 +1,101 @@
+<html>
+<head>
+
+<script type="text/javascript"  src="random-hex.js"></script>
+
+    <script type="text/javascript" >
+	
+		function  change (callerId) {
+
+			//alert (" mouse over "+callerId  );
+
+			// How do I find the name of the element that called me = pass this.id
+			var context = document.getElementById(callerId);
+		
+			if ( context == null ) 	
+				alert("didn't find td"); 
+//			else alert ("found id");
+
+//			alert(" display for "+ " item: " + context.style.display );
+
+			//context.style.bgColor="White";
+			context.bgColor=genHex();
+
+	//		Next: change back when onMouseOut!
+
+		}
+
+	</script>
+
+</head>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<center>
+<table>
+	<tr>
+      <td id="test01" bgcolor="Cyan" onclick="change(this.id)"> test01
+		</td>
+      <td id="test02" bgcolor="#f06300" onclick="change(this.id)"> test02
+		</td>
+      <td id="test03" bgcolor="#009999" onclick="change(this.id)"> test03
+		</td>
+      <td id="test05" bgcolor="#f06300" onclick="change(this.id)"> test05
+		</td>
+      <td id="test06" bgcolor="#009999" onclick="change(this.id)"> test06
+		</td>
+	</tr>
+	<tr>
+      <td id="test11" bgcolor="Cyan" onclick="change(this.id)"> test11
+		</td>
+      <td id="test12" bgcolor="#f06300" onclick="change(this.id)"> test12
+		</td>
+      <td id="test13" bgcolor="#009999" onclick="change(this.id)"> test13
+		</td>
+      <td id="test15" bgcolor="#f06300" onclick="change(this.id)"> test15
+		</td>
+      <td id="test16" bgcolor="#009999" onclick="change(this.id)"> test16
+		</td>
+	</tr>
+	<tr>
+      <td id="test21" bgcolor="Cyan" onclick="change(this.id)"> test21
+		</td>
+      <td id="test22" bgcolor="#f06300" onclick="change(this.id)"> test22
+		</td>
+      <td id="test23" bgcolor="#009999" onclick="change(this.id)"> test23
+		</td>
+      <td id="test25" bgcolor="#f06300" onclick="change(this.id)"> test25
+		</td>
+      <td id="test26" bgcolor="#009999" onclick="change(this.id)"> test26
+		</td>
+	</tr>
+	<tr>
+      <td id="test31" bgcolor="Cyan" onclick="change(this.id)"> test31
+		</td>
+      <td id="test32" bgcolor="#f06300" onclick="change(this.id)"> test32
+		</td>
+      <td id="test33" bgcolor="#009999" onclick="change(this.id)"> test33
+		</td>
+      <td id="test35" bgcolor="#f06300" onclick="change(this.id)"> test35
+		</td>
+      <td id="test36" bgcolor="#009999" onclick="change(this.id)"> test36
+		</td>
+	</tr>
+	<tr>
+      <td id="test41" bgcolor="Cyan" onclick="change(this.id)"> test41
+		</td>
+      <td id="test42" bgcolor="#f06300" onclick="change(this.id)"> test42
+		</td>
+      <td id="test43" bgcolor="#009999" onclick="change(this.id)"> test43
+		</td>
+      <td id="test45" bgcolor="#f06300" onclick="change(this.id)"> test45
+		</td>
+      <td id="test46" bgcolor="#009999" onclick="change(this.id)"> test46
+		</td>
+	</tr>
+</table>
+
+</center>
+</html>
