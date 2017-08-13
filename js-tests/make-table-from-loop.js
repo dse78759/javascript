@@ -1,9 +1,3 @@
-<!DOCTYPE html public>
-<html>
-
-<head>
-<script type="text/javascript">
-
 function inittable() {
 
 	var maxX=10, maxY=10;
@@ -17,7 +11,9 @@ function inittable() {
 	while  (  j < maxY ) {
 
 		theTable.tBodies[0].appendChild(document.createElement('tr'));
-
+		
+		//var xx = document.createElement("zzz");
+		
 		while  (  i < maxY ) {
 			
 			var y = document.createElement('td');
@@ -32,14 +28,3 @@ function inittable() {
 
 }
 
-</script> 
-
-</head>
-
- <body onLoad="inittable()"> 
-	<table id="board" border="2">
-		<tbody>
-		</tbody>
-	</table>
-</body>
-</html>
