@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<meta charset="utf-8"/>
+    <title>HTML5 Canvas Example</title>
+  </head>
+
+  <body>
+
+	<br/>
+	Loop with rand isolosces triangle coordinates
+	<br/>
+
+    <canvas id="canvasId" width="365px" height="345px"></canvas>
+
+  </body>
+
+<script type="text/javascript">
+	//var context = document.getElementById("canvasId");
+	var context = document.getElementById("canvasId").getContext("2d");
+	
+	var maxwidth = 325;  // Triangle Width
+	var maxheight = 305; // Triangle Height
+	var padding = 20;
+
+	for (i=0;i<16;i++){
+		//digit[i]=colors[Math.round(Math.random()*14)]
+		width=Math.round(Math.random()*maxwidth);
+		height=Math.round(Math.random()*maxheight);
+		//width=Math.round(Math.random()*140);
+
+		
+		// Draw a path
+		context.beginPath();
+		context.moveTo(padding + width/2, padding);        // Top Corner
+		context.lineTo(padding + width, height + padding); // Bottom Right
+		context.lineTo(padding, height + padding);         // Bottom Left
+		context.closePath();
+			
+		// Fill the path
+		//context.fillStyle = "#ffc821"; // yellowish
+		//context.fillStyle = "#336699";// blue ish
+		//context.fillStyle = "#ff0000";// red
+		//context.fillStyle = "#00ee00";// lt green
+		//context.fillStyle = "#11cc77";// olive
+
+		var color= Math.round(Math.random()*1000000)+100000;
+		context.fillStyle = "#"+color;// olive
+		context.fill();
+	
+	}
+
+	
+
+</script>
+
+</html>
