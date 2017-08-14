@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    
+  </style>
+
+  <title>does copying array make a ref copy or deep copy? by dse78759</title>
+
+  
+    
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+var colors = ["blue", "red", "green"];
+
+var monster={};
+
+monster.types=colors;
+
+var copy_colors = monster.types;
+
+var ogre = monster;
+
+<!-- var rc=delete colors;
+ -->
+colors=[]; // set it to a new empty array- will copy_colors be empty to?
+//console.log("rc = "+ rc);
+console.log("colors: " + colors);
+if ( colors.length===0 ) {
+	console.log("gone");
+}
+else {
+ console.error ("not gone!");
+}
+for ( var i in copy_colors ) {
+    console.log ( i + " = " + copy_colors[i]);
+}
+console.log("now ogre:");
+for ( var i in ogre.types ) {
+    console.log ( i + " = " + ogre.types[i]);
+}
+
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "xbct7op8"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

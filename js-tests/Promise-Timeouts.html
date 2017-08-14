@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style type="text/css">
+    
+  </style>
+
+  <title>Promise.all set Timeouts by dse78759</title>
+
+
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+
+function recursiveFunction( nn ) {
+	var p;
+  p=  new Promise ( function ( resolve, reject) { resolve (nn*nn); });
+  console.log(" type of p: " + typeof (p));
+  console.log(" instance of Promise? " + p instanceof Promise );
+	return p;
+}
+
+function main() {
+	// kick off first job, which is going to wait for 100 ms
+  var p1 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, 'foo');
+  });
+  
+	// second job, which is going to immmediately run the function
+  var p2 = recursiveFunction(3);
+ 
+  // wait for those two promises to finish
+  Promise.all([p1, p2]).then(function(values) {
+    console.log(values);
+  });
+}
+
+main();
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "czagzh0w"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+
