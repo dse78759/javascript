@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<meta charset="utf-8"/>
+    <title>HTML5 Canvas Example</title>
+  </head>
+  <body>
+    <canvas id="canvasId" width="265px" height="245px"></canvas>
+  </body>
+
+<script type="text/javascript">
+	//var context = document.getElementById("canvasId");
+	var context = document.getElementById("canvasId").getContext("2d");
+	
+	var width = 225;  // Triangle Width
+	var height = 205; // Triangle Height
+	var padding = 20;
+		
+	context.fillStyle = 'green';
+	
+	context.fillRect(10, 10, 100, 100);
+	
+	context.fillStyle='blue';
+	
+	context.fillRect(110, 110, 100, 100);
+
+	// Fill the path
+	//context.fillStyle = "#ffc821"; // yellowish
+	//context.fillStyle = "#336699";// blue ish
+	//context.fillStyle = "#ff0000";// red
+	//context.fillStyle = "#00ee00";// lt green
+	
+	context.fillStyle = "#111111";// 
+	context.fill();
+
+</script>
+
+</html>
