@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<meta charset="utf-8"/>
+    <title>HTML5 Canvas Example</title>
+  </head>
+
+  <body>
+
+	<br/>
+	Loop with rand isolosces triangle coordinates
+	<br/>
+
+    <canvas id="canvasId" width="865px" height="845px"></canvas>
+
+  </body>
+
+<script type="text/javascript">
+	//var context = document.getElementById("canvasId");
+
+	var d_start = new Date().getTime();
+
+	var context = document.getElementById("canvasId").getContext("2d");
+	
+	var maxwidth = 300;  // Triangle Width
+	var maxheight = 300; // Triangle Height
+	var padding = 20;
+
+	var x, y = 0 ; // coordinates of upper left corner
+	
+	// chart of results:
+	//		Triangles	ms
+	//		116		1
+	//		1116		82-94
+	//		3116		372-376
+	//		10116		1703-1731 - and you don't see them drawn....
+	for (i=0;i<311;i++){
+		width=Math.round(Math.random()*maxwidth);
+		height=Math.round(Math.random()*maxheight);
+		
+		x=Math.round(Math.random()*maxwidth);
+		y=Math.round(Math.random()*maxheight);
+
+//		context.fillStyle = 'green';
+		
+		context.fillRect(x, y, width, height);
+			
+		// Fill the path
+		//context.fillStyle = "#ffc821"; // yellowish
+		//context.fillStyle = "#336699";// blue ish
+		//context.fillStyle = "#ff0000";// red
+		//context.fillStyle = "#00ee00";// lt green
+		//context.fillStyle = "#11cc77";// olive
+
+		var color= Math.round(Math.random()*1000000)+100000;
+		context.fillStyle = "#"+color;
+		context.fill();
+	
+	}
+
+	var d_end = new Date().getTime();
+
+	var d_diff = d_end-d_start;
+
+	alert ( " time diff: "+ d_diff );
+	
+
+</script>
+
+</html>
