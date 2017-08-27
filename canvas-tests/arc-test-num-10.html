@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+	<meta charset="utf-8"/>
+    <title>ARC Example</title>
+  </head>
+  <body>
+    <canvas id="canvasId" width="265px" height="265px"></canvas>
+  </body>
+
+<script type="text/javascript">
+	var context = document.getElementById("canvasId").getContext("2d");
+	
+	var x = 80;  // Triangle Width
+	var y = 100; // Triangle Height
+	var radius = 20;
+		
+	context.fillStyle = '#0055ff';
+	context.arc ( x, y, radius, Math.PI, 2*Math.PI, false);
+
+	context.fill();
+
+	// makes circle
+	context.beginPath();
+	context.arc(200,75,50,0,2*Math.PI);
+	context.stroke();
+
+	context.fillStyle="red";
+	context.beginPath();
+	context.arc(250,75,30,2*Math.PI/3,4*Math.PI/3);
+	context.strokeStyle = '#ff0000'; // sets line color 
+	context.stroke();
+
+</script>
+
+</html>
